@@ -1,7 +1,7 @@
+import styles from '@/styles/Home.module.css'
+import { Inter } from '@next/font/google'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -66,7 +66,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className="bg-red-500">
               Docs <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
@@ -104,7 +104,7 @@ export default function Home() {
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            className="bg-red-500 p-4"
             target="_blank"
             rel="noopener noreferrer"
           >
