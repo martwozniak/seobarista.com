@@ -1,3 +1,6 @@
+from django.urls import path, include
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
 """api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,6 +19,29 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'is_staff']
+
+# Serializers define the API representation.
+#class SeoLinkSerializer(serializers.HyperlinkedModelSerializer):
+#    class Meta:
+#        model = SeoLink
+#        fields = ['url', 'meta_title', 'meta_description', 'meta_keywords', 'dom_tags', 'char_count', 'letters_count', 'og_tags', 'internal_links', 'external_links', 'backlinks', 'date_published', 'date_updated']
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
+    path('apiv2/', include('rest_framework.urls', namespace='rest_framework'))
+
 ]
