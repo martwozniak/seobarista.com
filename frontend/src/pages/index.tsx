@@ -1,5 +1,5 @@
 
-import MainHeader from '@/components/header/MainHeader';
+import HeroSection from '@/components/sections/hero/HeroSection';
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
 
@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <MainHeader sampleTextProp='Homepage'/>
+    <HeroSection sampleTextProp='Homepage'/>
     </>
   );
 }

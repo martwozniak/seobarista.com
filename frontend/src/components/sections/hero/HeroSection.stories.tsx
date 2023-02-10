@@ -3,7 +3,7 @@ import HeroSection, { IHeroSection } from './HeroSection';
 import { mockHeroSectionProps } from './HeroSection.mocks';
 
 export default {
-  title: 'templates/HeroSection',
+  title: 'hero/HeroSection',
   component: HeroSection,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
