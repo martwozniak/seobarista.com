@@ -10,7 +10,8 @@
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=4217f8409eb2"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.10",
@@ -46,6 +47,7 @@
     "@storybook/testing-library": "^0.0.13",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.17.0",
     "cross-env": "^7.0.3",
     "eslint-plugin-storybook": "^0.6.10",
     "husky": "^8.0.3",
@@ -61,5 +63,7 @@
   },
   "resolutions": {
     "webpack": "^5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "frontend@0.1.0"
 }
